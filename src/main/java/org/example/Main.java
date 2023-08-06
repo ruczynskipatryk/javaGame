@@ -18,5 +18,7 @@ public class Main {
         Goblin gl = new Goblin(80, 12, 23, "Knife");
         Warlock wl = new Warlock(65, 11, 35, "Wand");
 
+        fightingArena arena = new fightingArena(Mage, Skeleton);
+        arena.startBattle();
     }
 }

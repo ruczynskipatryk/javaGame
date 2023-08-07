@@ -23,7 +23,7 @@ public class Main {
         Monster monster1 = new Monster(100, 5, 20);
         Monster monster2 = new Monster(120, 4, 15);
 
-        fightingArena arena = new fightingArena(monster1, monster2);
+        fightingArena arena = new fightingArena(s, mg);
         arena.startBattle();
     }
 }

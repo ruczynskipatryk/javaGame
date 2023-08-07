@@ -10,15 +10,10 @@ public class Monster {
         return name;
     }
 
-    public Monster() {
-        System.out.println("Basic constructor from monster class.");
-    }
-
     public Monster(double healthPoints, double walkSpeed, double attackPoints) {
         this.healthPoints = healthPoints;
         this.walkSpeed = walkSpeed;
         this.attackPoints = attackPoints;
-        System.out.println("Non basic constructor from monster class.");
     }
 
     public void attack(Monster target) {

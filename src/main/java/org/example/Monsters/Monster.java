@@ -10,7 +10,7 @@ public class Monster {
         return name;
     }
 
-    public Monster(double healthPoints, double walkSpeed, double attackPoints) {
+    public Monster(String name, double healthPoints, double walkSpeed, double attackPoints) {
         this.healthPoints = healthPoints;
         this.walkSpeed = walkSpeed;
         this.attackPoints = attackPoints;

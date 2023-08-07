@@ -18,7 +18,12 @@ public class Main {
         Goblin gl = new Goblin(80, 12, 23, "Knife");
         Warlock wl = new Warlock(65, 11, 35, "Wand");
 
-        fightingArena arena = new fightingArena(Mage, Skeleton);
+
+        // First fight simulations
+        Monster monster1 = new Monster(100, 5, 20);
+        Monster monster2 = new Monster(120, 4, 15);
+
+        fightingArena arena = new fightingArena(monster1, monster2);
         arena.startBattle();
     }
 }

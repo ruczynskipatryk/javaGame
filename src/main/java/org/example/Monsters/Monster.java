@@ -11,6 +11,7 @@ public class Monster {
     }
 
     public Monster(String name, double healthPoints, double walkSpeed, double attackPoints) {
+        this.name = name;
         this.healthPoints = healthPoints;
         this.walkSpeed = walkSpeed;
         this.attackPoints = attackPoints;

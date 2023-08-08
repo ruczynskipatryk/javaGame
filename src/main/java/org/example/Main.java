@@ -10,7 +10,6 @@ public class Main {
 
 
         // Bright side classes
-        Warrior wo = new Warrior("Warrior",120, 8, 25, "Sword");
 
         /*
 
@@ -26,15 +25,16 @@ public class Main {
         Warlock wl = new Warlock("Warlock", 65, 11, 35, "Wand");
 
          */
-        Goblin gl = new Goblin("Goblin", 80, 12, 23, "Knife");
+
+        Warrior wo = new Warrior("Warrior",150, 4, 25, "Sword");
+
+        Goblin gl = new Goblin("Goblin", 80, 6, 19, "Knife");
 
 
 
         // First fight simulations
-        Goblin monster1 = new Goblin("Goblin", 110, 5, 13, "Knife");
-        Warrior monster2 = new Warrior("Warrior", 150, 4, 23, "Sword");
 
         fightingArena arena = new fightingArena(gl, wo);
-        arena.startBattle();
+        arena.startBattle("Goblin", "Warrior");
     }
 }

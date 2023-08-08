@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.Monsters.Mage;
 import org.example.Monsters.Monster;
 
 

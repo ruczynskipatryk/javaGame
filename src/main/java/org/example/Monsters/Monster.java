@@ -7,14 +7,17 @@ public class Monster {
     public double healthPoints;
     public double walkSpeed;
     public double attackPoints;
+    public String weaponType;
+
     public String getName() {
         return name;
     }
-    public Monster(String name, double healthPoints, double walkSpeed, double attackPoints) {
+    public Monster(String name, double healthPoints, double walkSpeed, double attackPoints, String weaponType) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.walkSpeed = walkSpeed;
         this.attackPoints = attackPoints;
+        this.weaponType = weaponType;
     }
 
     // Rnadom dodges class, 20% for dodge

@@ -26,7 +26,9 @@ public class Main {
 
         Random random = new Random();
         Monster randomMonsterBrightSide = availableMonstersBrightSide.get(random.nextInt(availableMonstersBrightSide.size()));
+        System.out.println("Your random Monster from Bright Side is: " + randomMonsterBrightSide.getName());
         Monster randomMonsterDarkSide = availableMonstersDarkSide.get(random.nextInt(availableMonstersDarkSide.size()));
+        System.out.println("Your random Monster from Dark Side is: " + randomMonsterDarkSide.getName());
 
         fightingArena arena = new fightingArena(randomMonsterBrightSide, randomMonsterDarkSide);
         arena.startBattle(randomMonsterBrightSide.getName(), randomMonsterDarkSide.getName());

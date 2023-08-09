@@ -18,7 +18,7 @@ public class fightingArena {
         while (monster1.healthPoints > 0 && monster2.healthPoints > 0) {
             monster1.attack(monster2);
             monster2.healthPoints -= monster1.attackPoints;
-            System.out.println(monster1Name + " attacks " + monster2Name + " for " + monster1.attackPoints + " damage!");
+            System.out.println(monster1Name + " attacks " + monster2Name + " by " + monster1.weaponType + " for " + monster1.attackPoints + " damage!");
             System.out.println(monster2Name + " actual health points is: " + monster2.healthPoints);
 
             if(monster2.healthPoints <= 0) {

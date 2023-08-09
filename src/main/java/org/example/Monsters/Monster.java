@@ -1,15 +1,15 @@
 package org.example.Monsters;
 
+import java.util.Random;
+
 public class Monster {
     public String name;
     public double healthPoints;
     public double walkSpeed;
     public double attackPoints;
-
     public String getName() {
         return name;
     }
-
     public Monster(String name, double healthPoints, double walkSpeed, double attackPoints) {
         this.name = name;
         this.healthPoints = healthPoints;
@@ -17,14 +17,18 @@ public class Monster {
         this.attackPoints = attackPoints;
     }
 
-    public void attack(Monster target) {
-        target.receiveDamage(attackPoints);
-    }
+    // Rnadom dodges class, 20% for dodge
+    private Random random = new Random();
 
+    public void attack(Monster target) {
+        if (random.nextDouble() > 0.2) {
+            target.receiveDamage(attackPoints);
+        }
+        else {
+            System.out.println(target.getName() + "has dodged the attack!");
+        }
+    }
     public void receiveDamage(double attackPoints) {
         healthPoints -= attackPoints;
-        if (healthPoints <= 0) {
-            System.out.println(name + " has been defeated!");
-        }
     }
 }

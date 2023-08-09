@@ -1,4 +1,4 @@
-/* package org.example.Monsters;
+ package org.example.Monsters;
 
 public class Priest extends Monster {
 
@@ -11,4 +11,3 @@ public class Priest extends Monster {
 
 }
 
- */

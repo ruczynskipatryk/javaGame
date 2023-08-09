@@ -1,4 +1,4 @@
-/* package org.example.Monsters;
+ package org.example.Monsters;
 
 public class Barbarian extends Monster {
 
@@ -10,4 +10,3 @@ public class Barbarian extends Monster {
     }
 
 }
- */

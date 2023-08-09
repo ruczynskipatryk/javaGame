@@ -1,7 +1,5 @@
 package org.example.Monsters;
 
-import org.example.Monsters.Monster;
-
 public class Warrior extends Monster {
     String weaponType;
     public Warrior(String name, double healthPoints, double walkSpeed, double attackPoints, String weaponType){

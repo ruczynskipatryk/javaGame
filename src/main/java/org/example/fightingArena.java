@@ -39,14 +39,20 @@ public class fightingArena {
                 break;
             }
 
-            System.out.println("_______________________________");
-            System.out.println("Bright Side Points: " + brightSidePoints);
-            System.out.println("Dark Side Points: " + darkSidePoints);
-
-
         }
 
         System.out.println("The battle between " + monster1Name + " and " + monster2Name + " is over!");
+        System.out.println("_______________________________");
+        System.out.println("Bright Side Points: " + brightSidePoints);
+        System.out.println("Dark Side Points: " + darkSidePoints);
+
+        if (brightSidePoints > darkSidePoints) {
+            System.out.println("The Bright Side wins!");
+        } else if (darkSidePoints > brightSidePoints) {
+            System.out.println("The Dark Side wins!");
+        } else {
+            System.out.println("It's a draw!");
+        }
     }
 }
 

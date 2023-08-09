@@ -25,7 +25,7 @@ public class Monster {
             target.receiveDamage(attackPoints);
         }
         else {
-            System.out.println(target.getName() + "has dodged the attack!");
+            System.out.println(target.getName() + " has dodged the attack!");
         }
     }
     public void receiveDamage(double attackPoints) {

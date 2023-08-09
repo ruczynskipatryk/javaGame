@@ -23,6 +23,7 @@ public class fightingArena {
 
             if(monster2.healthPoints <= 0) {
                 System.out.println(monster2Name + " has less then zero health points and has been defeated!");
+                break;
             }
 
             monster2.attack(monster1);
@@ -31,6 +32,7 @@ public class fightingArena {
             System.out.println(monster1Name + " actual health points is: " + monster1.healthPoints);
             if(monster1.healthPoints <= 0) {
                 System.out.println(monster1Name + " has less then zero health points and has been defeated!");
+                break;
             }
 
         }

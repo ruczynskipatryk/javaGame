@@ -19,7 +19,6 @@ public class Monster {
 
     public void attack(Monster target) {
         target.receiveDamage(attackPoints);
-        System.out.println(name + " attacks " + target.getName() + " for " + attackPoints + " damage!");
     }
 
     public void receiveDamage(double attackPoints) {

@@ -15,7 +15,7 @@ public class fightingArena {
     }
 
     public void startBattle(String monster1Name, String monster2Name) {
-        System.out.println("The battle between " + monster1Name + " and " + monster2Name + " begins!");
+        System.out.println("Monsters stepped into fighting arena! The battle between " + monster1Name + " and " + monster2Name + " begins!");
 
         while (monster1.healthPoints > 0 && monster2.healthPoints > 0) {
             monster1.attack(monster2);

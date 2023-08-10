@@ -2,8 +2,8 @@
 
 public class Mage extends Monster {
 
-    public Mage(String name, double healthPoints, double walkSpeed, double attackPoints, String weaponType){
-        super(name, healthPoints, walkSpeed, attackPoints, weaponType);
+    public Mage(String name, double healthPoints, double armour, double walkSpeed, double attackPoints, String weaponType){
+        super(name, healthPoints, armour, walkSpeed, attackPoints, weaponType);
     }
 
 }

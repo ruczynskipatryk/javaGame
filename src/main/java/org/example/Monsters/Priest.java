@@ -2,8 +2,8 @@
 
 public class Priest extends Monster {
 
-    public Priest(String name, double healthPoints, double walkSpeed, double attackPoints, String weaponType){
-        super(name, healthPoints, walkSpeed, attackPoints, weaponType);
+    public Priest(String name, double healthPoints, double armour, double walkSpeed, double attackPoints, String weaponType){
+        super(name, healthPoints, armour, walkSpeed, attackPoints, weaponType);
     }
 
 }

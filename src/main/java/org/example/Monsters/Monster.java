@@ -13,6 +13,7 @@ public class Monster {
     public String getName() {
         return name;
     }
+
     public Monster(String name, double healthPoints, double armour, double walkSpeed, double attackPoints, String weaponType) {
         this.name = name;
         this.healthPoints = healthPoints;
@@ -25,9 +26,14 @@ public class Monster {
     // Rnadom dodges class, 20% for dodge
     private Random random = new Random();
 
+    public Double getArmour() {
+        return armour;
+    }
+
     public void attack(Monster target) {
         if (random.nextDouble() > 0.2) {
-            target.receiveDamage(attackPoints);
+            double damageDealt = Math.max(0, attackPoints - target.getArmour());
+            target.receiveDamage(damageDealt);
         }
         else {
             System.out.println(target.getName() + " has dodged the attack!");

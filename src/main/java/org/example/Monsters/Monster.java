@@ -30,6 +30,10 @@ public class Monster {
         return armour;
     }
 
+    public double getAttackPoints() {
+        return attackPoints;
+    }
+
     public void attack(Monster target) {
         if (random.nextDouble() > 0.2) {
             double damageDealt = Math.max(0, attackPoints - target.getArmour());

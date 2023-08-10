@@ -7,6 +7,7 @@ public class Monster {
     public double healthPoints;
     public double armour;
     public double walkSpeed;
+    public double attackSpeed;
     public double attackPoints;
     public String weaponType;
 
@@ -14,11 +15,12 @@ public class Monster {
         return name;
     }
 
-    public Monster(String name, double healthPoints, double armour, double walkSpeed, double attackPoints, String weaponType) {
+    public Monster(String name, double healthPoints, double armour, double walkSpeed, double attackSpeed, double attackPoints, String weaponType) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.armour = armour;
         this.walkSpeed = walkSpeed;
+        this.attackSpeed = attackSpeed;
         this.attackPoints = attackPoints;
         this.weaponType = weaponType;
     }

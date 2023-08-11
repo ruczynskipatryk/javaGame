@@ -32,7 +32,7 @@ public class Main {
         System.out.println("Your random Monster from Dark Side is: " + randomMonsterDarkSide.getName());
 
         fightingArena arena = new fightingArena(randomMonsterBrightSide, randomMonsterDarkSide);
-        arena.startBattle(randomMonsterBrightSide.getName(), randomMonsterDarkSide.getName());
+        arena.startRealTimeBattle(randomMonsterBrightSide.getName(), randomMonsterDarkSide.getName());
 
     }
 }

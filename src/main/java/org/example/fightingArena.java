@@ -19,7 +19,7 @@ public class fightingArena {
 
         while (monster1.healthPoints > 0 && monster2.healthPoints > 0) {
             monster1.attack(monster2);
-            double damage1 = Math.max(0, monster1.getAttackPoints() - monster2.getArmour());
+            double damage1 = Math.max(0, monster1.getAttackPoints() - monster2.getArmor());
             monster2.receiveDamage(damage1);
             System.out.println(monster1Name + " attacks " + monster2Name + " by " + monster1.weaponType + " for " + damage1 + " damage!");
             System.out.println(monster2Name + " actual health points is: " + monster2.healthPoints);
@@ -31,7 +31,7 @@ public class fightingArena {
             }
 
             monster2.attack(monster1);
-            double damage2 = Math.max(0, monster2.getAttackPoints() - monster1.getArmour());
+            double damage2 = Math.max(0, monster2.getAttackPoints() - monster1.getArmor());
             monster1.receiveDamage(damage2);
             System.out.println(monster2Name + " attacks " + monster1Name + " for " + damage2 + " damage!");
             System.out.println(monster1Name + " actual health points is: " + monster1.healthPoints);

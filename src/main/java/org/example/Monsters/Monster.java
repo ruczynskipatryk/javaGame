@@ -5,7 +5,7 @@ import java.util.Random;
 public class Monster {
     public String name;
     public double healthPoints;
-    public double armour;
+    public double armor;
     public double walkSpeed;
     public double attackSpeed;
     public double attackPoints;
@@ -15,10 +15,10 @@ public class Monster {
         return name;
     }
 
-    public Monster(String name, double healthPoints, double armour, double walkSpeed, double attackSpeed, double attackPoints, String weaponType) {
+    public Monster(String name, double healthPoints, double armor, double walkSpeed, double attackSpeed, double attackPoints, String weaponType) {
         this.name = name;
         this.healthPoints = healthPoints;
-        this.armour = armour;
+        this.armor = armor;
         this.walkSpeed = walkSpeed;
         this.attackSpeed = attackSpeed;
         this.attackPoints = attackPoints;
@@ -28,8 +28,8 @@ public class Monster {
     // Rnadom dodges class, 20% for dodge
     private Random random = new Random();
 
-    public Double getArmour() {
-        return armour;
+    public Double getArmor() {
+        return armor;
     }
 
     public double getAttackPoints() {
@@ -38,7 +38,7 @@ public class Monster {
 
     public void attack(Monster target) {
         if (random.nextDouble() > 0.2) {
-            double damageDealt = Math.max(0, attackPoints - target.getArmour());
+            double damageDealt = Math.max(0, attackPoints - target.getArmor());
             target.receiveDamage(damageDealt);
         }
         else {

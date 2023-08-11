@@ -32,6 +32,10 @@ public class Monster {
         return armor;
     }
 
+    public Double getAttackSpeed() {
+        return attackSpeed;
+    }
+
     public double getAttackPoints() {
         return attackPoints;
     }

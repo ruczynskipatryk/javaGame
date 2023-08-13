@@ -2,11 +2,47 @@ package org.example;
 
 import org.example.Monsters.Monster;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class fightingArena {
     private Monster monster1;
     private int brightSidePoints;
     private Monster monster2;
     private int darkSidePoints;
+
+
+
+    // Score manager for saving punctation to separate file and see who's winning now
+    public class ScoreManager {
+        // Saving scores to file
+        public void saveScoers(int brightSidePoints, int darkSidePoints) {
+            try {
+                FileWriter writer = new FileWriter("scores.txt");
+                writer.write("Bright Side points: " + brightSidePoints + "\n");
+                writer.write("Dark side points: " + darkSidePoints + "\n");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        // Loading scores from file
+        public void loadScoers() {
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader("scores.txt"));
+                String line;
+                while((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 
     public fightingArena(Monster monster1, Monster monster2) {
         this.monster1 = monster1;
@@ -59,6 +95,7 @@ public class fightingArena {
                 break;
             }
 
+            // Thread.sleep is used to create "delays" in combat, without it, each iteration of the loop will be very fast
             try {
                 Thread.sleep(Math.min(monster1DelayMillis, monster2DelayMillis));
             } catch (InterruptedException e) {
@@ -79,6 +116,7 @@ public class fightingArena {
         } else {
             System.out.println("It's a draw!");
         }
+
     }
 }
 

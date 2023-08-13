@@ -18,31 +18,16 @@ public class fightingArena {
         return 0.01 * armor * armor;
     }
 
-    public int mapAttackSpeedToAttackCount(double attackSpeed) {
-        double minAttackSpeed = 0.1;
-        double maxAttackSpeed = 1.0;
-        int minAttackCount = 1;
-        int maxAttackCount = 3;
-
-        double attackCount = minAttackCount + ((attackSpeed - minAttackSpeed) / (maxAttackSpeed - minAttackSpeed)) * (maxAttackCount - minAttackCount);
-        return(int) Math.round(attackCount);
-    }
-
-
     public void startRealTimeBattle(String monster1Name, String monster2Name) {
         System.out.println("Monsters stepped into fighting arena! The battle between " + monster1Name + " and " + monster2Name + " begins!");
         System.out.println("_______________________________");
 
+        // Delay for monsters fight included attack speed to simulate real time battle
         long monster1DelayMillis = (long) (1000.0 / monster1.getAttackSpeed());
         long monster2DelayMillis = (long) (1000.0 / monster2.getAttackSpeed());
-        int monster1AttackCount = mapAttackSpeedToAttackCount(monster1.getAttackSpeed());
-        int monster2AttackCount = mapAttackSpeedToAttackCount(monster2.getAttackSpeed());
 
-        // Based on attack speed of a monster, time of delay is shorter
-        for (int i = 0; i < Math.max(monster1AttackCount, monster2AttackCount); i++){
         while (monster1.healthPoints > 0 && monster2.healthPoints > 0) {
-
-            if (i < monster1AttackCount && monster1.healthPoints > 0) {
+            if (monster1.healthPoints > 0) {
                 monster1.attack(monster2);
                 double damage1 = Math.max(0, monster1.getAttackPoints() - calculateDamageReduction(monster2.getArmor()));
                 monster2.receiveDamage(damage1);
@@ -59,7 +44,7 @@ public class fightingArena {
 
             System.out.println("_______________________________");
 
-            if (i < monster2AttackCount && monster2.healthPoints > 0) {
+            if (monster2.healthPoints > 0) {
                 monster2.attack(monster1);
                 double damage2 = Math.max(0, monster2.getAttackPoints() - calculateDamageReduction(monster1.getArmor()));
                 monster1.receiveDamage(damage2);
@@ -73,10 +58,9 @@ public class fightingArena {
                 darkSidePoints++;
                 break;
             }
-        }
 
             try {
-                Thread.sleep(Math.max(monster1DelayMillis, monster2DelayMillis));
+                Thread.sleep(Math.min(monster1DelayMillis, monster2DelayMillis));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

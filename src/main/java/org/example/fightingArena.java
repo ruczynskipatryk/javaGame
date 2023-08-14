@@ -16,33 +16,6 @@ public class fightingArena {
 
 
     // Score manager for saving punctation to separate file and see who's winning now
-    public class ScoreManager {
-        // Saving scores to file
-        public void saveScoers(int brightSidePoints, int darkSidePoints) {
-            try {
-                FileWriter writer = new FileWriter("scores.txt");
-                writer.write("Bright Side points: " + brightSidePoints + "\n");
-                writer.write("Dark side points: " + darkSidePoints + "\n");
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        // Loading scores from file
-        public void loadScoers() {
-            try {
-                BufferedReader reader = new BufferedReader(new FileReader("scores.txt"));
-                String line;
-                while((line = reader.readLine()) != null) {
-                    System.out.println(line);
-                }
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
 
     public fightingArena(Monster monster1, Monster monster2) {
         this.monster1 = monster1;

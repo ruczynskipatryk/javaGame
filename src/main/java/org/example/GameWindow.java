@@ -1,4 +1,13 @@
 package org.example;
 
-public class GameWindow {
+import javax.swing.*;
+
+public class GameWindow extends JFrame {
+    private JFrame jFrame;
+    public GameWindow() {
+        jFrame = new JFrame();
+
+        jFrame.setSize(400,400);
+        jFrame.setVisible(true);
+    }
 }

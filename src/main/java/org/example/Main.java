@@ -40,9 +40,12 @@ public class Main {
             arena.startRealTimeBattle(randomMonsterBrightSide.getName(), randomMonsterDarkSide.getName());
 
             ScoreManager scoreManager = new ScoreManager();
-            scoreManager.saveScoers(0, 0);
+            scoreManager.resetScoresIfNeeded();
 
-            scoreManager.loadScoers();
-
+            // Current Score
+            System.out.println("_______________________________");
+            System.out.println("Score from current day is:");
+            System.out.println("Bright Side Points: " + scoreManager.getBrightSidePoints());
+            System.out.println("Dark Side Points: " + scoreManager.getDarkSidePoints());
         }
 }

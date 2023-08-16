@@ -1,18 +1,14 @@
 package org.example;
 
 import org.example.Monsters.Monster;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import org.example.ScoreManager;
 
 public class fightingArena {
     private Monster monster1;
     private int brightSidePoints;
     private Monster monster2;
     private int darkSidePoints;
-
+    ScoreManager scoreManager = new ScoreManager();
 
 
     // Score manager for saving punctation to separate file and see who's winning now
@@ -82,10 +78,15 @@ public class fightingArena {
         System.out.println("Bright Side Points: " + brightSidePoints);
         System.out.println("Dark Side Points: " + darkSidePoints);
 
+
         if (brightSidePoints > darkSidePoints) {
-            System.out.println("The Bright Side wins!");
+            // When Bright Side gets a score point
+            scoreManager.incrementBrightSidePoints();
+            System.out.println("The Bright Side wins this round!");
         } else if (darkSidePoints > brightSidePoints) {
-            System.out.println("The Dark Side wins!");
+            // When Dark Side gets a score point
+            scoreManager.incrementDarkSidePoints();
+            System.out.println("The Dark Side wins this round!");
         } else {
             System.out.println("It's a draw!");
         }

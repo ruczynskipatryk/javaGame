@@ -1,2 +1,3 @@
-Bright Side points: 0
-Dark side points: 0
+Bright Side points: 10
+Dark side points: 6
+Last reset date: 2023-08-16

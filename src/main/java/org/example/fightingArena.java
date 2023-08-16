@@ -1,12 +1,11 @@
 package org.example;
 
 import org.example.Monsters.Monster;
-import org.example.ScoreManager;
 
 public class fightingArena {
-    private Monster monster1;
+    private final Monster monster1;
     private int brightSidePoints;
-    private Monster monster2;
+    private final Monster monster2;
     private int darkSidePoints;
     ScoreManager scoreManager = new ScoreManager();
 
@@ -18,9 +17,9 @@ public class fightingArena {
         this.monster2 = monster2;
     }
 
-    // Square function to calculate damage reduction by armor
+    // Using square root to calculate damage reduction by armor
     public double calculateDamageReduction(double armor) {
-        return 0.01 * armor * armor;
+        return Math.round(100.0 * Math.sqrt(armor)) / 100.0;
     }
 
     public void startRealTimeBattle(String monster1Name, String monster2Name) {
@@ -38,7 +37,8 @@ public class fightingArena {
                 monster2.receiveDamage(damage1);
                 System.out.println(monster1Name + " attacks " + monster2Name + " by " +
                         monster1.weaponType + " for " + damage1 + " damage!");
-                System.out.println(monster2Name + " actual health points is: " + monster2.healthPoints);
+                System.out.printf("%s actual health points is: %.2f%n", monster2Name, monster2.healthPoints);
+
             }
 
             if (monster2.healthPoints <= 0) {
@@ -55,7 +55,8 @@ public class fightingArena {
                 monster1.receiveDamage(damage2);
                 System.out.println(monster2Name + " attacks " + monster1Name + " for " +
                         damage2 + " damage!");
-                System.out.println(monster1Name + " actual health points is: " + monster1.healthPoints);
+                System.out.printf("%s actual health points is: %.2f%n", monster1Name, monster1.healthPoints);
+
             }
 
             if (monster1.healthPoints <= 0) {

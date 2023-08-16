@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.Monsters.*;
-import org.example.fightingArena;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.Random;
 public class Main {
         public static void main(String[] args) {
 
-
+            // Implement all of the Monsters from Bright and Dark side.
 
             List<Monster> availableMonstersBrightSide = new ArrayList<>();
             availableMonstersBrightSide.add(new Hunter("Hunter", 100, 5, 11, 7, 28, "Crossbow"));
@@ -39,9 +38,9 @@ public class Main {
             fightingArena arena = new fightingArena(randomMonsterBrightSide, randomMonsterDarkSide);
             arena.startRealTimeBattle(randomMonsterBrightSide.getName(), randomMonsterDarkSide.getName());
 
+            // Score Manager loaded
             ScoreManager scoreManager = new ScoreManager();
             scoreManager.resetScoresIfNeeded();
-
             // Current Score
             System.out.println("_______________________________");
             System.out.println("Score from current day is:");

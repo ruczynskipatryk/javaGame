@@ -76,18 +76,18 @@ public class fightingArena {
 
         System.out.println("The battle between " + monster1Name + " and " + monster2Name + " is over!");
         System.out.println("_______________________________");
-        System.out.println("Bright Side Points: " + brightSidePoints);
-        System.out.println("Dark Side Points: " + darkSidePoints);
+        System.out.println("Bright Side score after the fight: " + brightSidePoints);
+        System.out.println("Dark Side score after the fight: " + darkSidePoints);
 
 
         if (brightSidePoints > darkSidePoints) {
             // When Bright Side gets a score point
             scoreManager.incrementBrightSidePoints();
-            System.out.println("The Bright Side wins this round!");
+            System.out.println("The Bright Side wins this round and got one score point!");
         } else if (darkSidePoints > brightSidePoints) {
             // When Dark Side gets a score point
             scoreManager.incrementDarkSidePoints();
-            System.out.println("The Dark Side wins this round!");
+            System.out.println("The Dark Side wins this round and got one score point!");
         } else {
             System.out.println("It's a draw!");
         }

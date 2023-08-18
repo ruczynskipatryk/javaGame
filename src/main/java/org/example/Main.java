@@ -20,6 +20,7 @@ public class Main {
             availableMonstersBrightSide.add(new Priest("Priest", 250, 3, 10, 4, 13, "Lace"));
             availableMonstersBrightSide.add(new Barbarian("Barbarian", 200, 8, 7, 6, 22, "Saber"));
             availableMonstersBrightSide.add(new Rogue("Rogue", 120, 6, 11, 8, 20, "Daggers"));
+            availableMonstersBrightSide.add(new Paladin("Paladin", 200, 8, 8, 7, 21, "Big Sword"));
 
             List<Monster> availableMonstersDarkSide = new ArrayList<>();
             availableMonstersDarkSide.add(new Skeleton("Skeleton", 100, 1, 17, 7, 23, "Bow"));
@@ -28,6 +29,7 @@ public class Main {
             availableMonstersDarkSide.add(new Assasin("Assasin", 120, 6, 11, 8, 20, "Daggers"));
             availableMonstersDarkSide.add(new Warlock("Warlock", 100, 3, 10, 5, 30, "Wand"));
             availableMonstersDarkSide.add(new Orc("Orc", 180, 10, 4, 6, 23, "Sword"));
+            availableMonstersDarkSide.add(new Shaman("Shaman", 100, 30, 4, 3, 10, "Magic Rod"));
 
             Random random = new Random();
             Monster randomMonsterBrightSide = availableMonstersBrightSide.get(random.nextInt(availableMonstersBrightSide.size()));

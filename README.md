@@ -2,7 +2,8 @@
 
 <h1>Project Overview 🎨</h1>
 
-My first 2D Game........ soon
+My first 2D Game........ soon more informations.
+I'm still working on it. At this moment it's working good on console.
 
 <h1>Tech/framework used 🧰</h1>
 - Java

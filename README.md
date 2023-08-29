@@ -7,6 +7,7 @@ I'm still working on it. At this moment it's working good on console.
 
 <h1>Tech/framework used 🧰</h1>
 - Java
+- Git
 <br>
 
 <h1>Main functionalities 🕹️ </h1>

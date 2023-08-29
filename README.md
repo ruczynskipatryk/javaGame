@@ -10,6 +10,8 @@ I'm still working on it. At this moment it's working good on console.
 <br>
 - Git
 <br>
+- Maven
+<br>
 
 <h1>Main functionalities 🕹️ </h1>
 - Fight of the monsters on the arena.

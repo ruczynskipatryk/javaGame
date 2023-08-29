@@ -8,8 +8,10 @@ I'm still working on it. At this moment it's working good on console.
 <h1>Tech/framework used 🧰</h1>
 - Java
 <br>
-- sooooon
 
 <h1>Main functionalities 🕹️ </h1>
-- sooooon
+- Fight of the monsters on the arena.
 <br>
+- Caluclating actual score, on the each new day.
+<br>
+- Soon more

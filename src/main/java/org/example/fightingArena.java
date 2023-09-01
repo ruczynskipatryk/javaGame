@@ -27,8 +27,8 @@ public class fightingArena {
         System.out.println("_______________________________");
 
         // Delay for monsters fight included attack speed to simulate real time battle
-        long monster1DelayMillis = (long) (1000.0 / monster1.getAttackSpeed());
-        long monster2DelayMillis = (long) (1000.0 / monster2.getAttackSpeed());
+        long monster1DelayMillis = (long) (4000.0 / monster1.getAttackSpeed());
+        long monster2DelayMillis = (long) (4000.0 / monster2.getAttackSpeed());
 
         while (monster1.healthPoints > 0 && monster2.healthPoints > 0) {
             if (monster1.healthPoints > 0) {

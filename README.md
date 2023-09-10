@@ -2,8 +2,8 @@
 
 <h1>Project Overview 🎨</h1>
 
-My first 2D Game where monsters from bright side fight with monsters from dark side. Soon more informations.
-I'm still working on it. At this moment it's working good on console.
+My first 2D Game where monsters from bright side fight vs monsters from dark side.
+I'm still working on this project. Soon more informations. At this moment it's working good on console.
 
 <h1>Tech/framework used 🧰</h1>
 - Java

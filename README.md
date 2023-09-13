@@ -2,7 +2,7 @@
 
 <h1>Project Overview 🎨</h1>
 
-My first 2D Game where monsters from bright side fight vs monsters from dark side.
+My first 2D Game where monsters from bright side fight vs monsters from dark side. In this project I'm using object-oriented programming.
 I'm still working on this project. Soon more informations. At this moment it's working good on console.
 
 <h1>Tech/framework used 🧰</h1>

@@ -1,4 +1,4 @@
-🎮 Java 2D Game - name of the game
+🎮 Java 2D Game
 
 <h1>Project Overview 🎨</h1>
 

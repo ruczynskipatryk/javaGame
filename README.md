@@ -18,4 +18,3 @@ I'm still working on this project. Soon more informations. At this moment it's w
 <br>
 - Caluclating actual score, on the each new day.
 <br>
-- Soon more
